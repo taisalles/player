@@ -105,7 +105,7 @@ function updateProgress() {
     const barWidth = (song.currentTime/song.duration) * 100;
     currentProgress.style.setProperty('--progress', `${barWidth}%`);
     songTime.innerText = toHHMMSS(song.currentTime);
-
+    totalTime.innerText = toHHMMSS(song.duration - song.currentTime);
 }
 
 function jumpTo(event) {
